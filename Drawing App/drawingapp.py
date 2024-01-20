@@ -2,7 +2,7 @@
 Provides a simple drawing app
 Hold down the left button to draw
 Provides some single key commands:
-R-red G-green B-blue
+R-red O-Orange Y-yellow G-green B-blue I-indigo V-violet P-pink
 C-clear
 '''
 
@@ -13,7 +13,7 @@ class Drawing(object):
     def display(self):
         root = Tk()
 
-        canvas = Canvas(root, width=500, height=500)
+        canvas = Canvas(root, width=1430, height=860)
         canvas.grid(row=0, column=0)
 
         draw_color = 'red'
@@ -35,10 +35,41 @@ class Drawing(object):
                 canvas.delete("all")
             elif ch == 'R':
                 draw_color = 'red'
+            elif ch == 'O':
+                draw_color = 'orange'
+            elif ch == 'Y':
+                draw_color = 'yellow'
             elif ch == 'G':
                 draw_color = 'green'
             elif ch == 'B':
                 draw_color = 'blue'
+            elif ch == 'I':
+                draw_color = 'indigo'    
+            elif ch == "V":
+                draw_color = 'violet'
+            elif ch == 'P':
+                draw_color = 'pink'
+            elif ch == 'W':
+                draw_color = 'white'
+            elif ch == 'T':
+                draw_color = 'teal'
+            elif ch == 'A':
+                draw_color = 'aquamarine'
+            elif ch == 'H':
+                draw_color = 'hazel'
+            elif ch == 'W':
+                draw_color = 'white'
+            elif ch == 'L':
+                draw_color = 'lime green'
+            elif ch == 'M':
+                draw_color = 'magenta'
+            elif ch == 'D':
+                draw_color = "#6F4E37"
+            
+            
+
+
+        
             
 
         canvas.bind('<KeyPress>', key_press)
